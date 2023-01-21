@@ -18,7 +18,7 @@ const CartReducer = (state = initialState, action) => {
 
     case ADD_ITEM:
       const indexItem = state.items.findIndex(
-        (item) => item.id === item.days
+        (item) => item.id === action.item.id
       );
       if (indexItem === -1) {
         const item = {...action.item, quantity: 1 };

@@ -27,7 +27,7 @@ const NewPlaceScreen = ({ navigation, route }) => {
 
   const handleSave = () => {
     dispatch(addPlace(title, image, location));
-    navigation.navigate("Dirección");
+    navigation.navigate("Registro de Usuario");
   };
 
   return (

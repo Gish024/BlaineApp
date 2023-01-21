@@ -18,8 +18,7 @@ const PlaceListScreen = ({ navigation }) => {
     dispatch(addressAction.loadAddress());
   }, []);
 
-  const renderItem = ({ item }) => (
-    
+  const renderItem = ({ item }) => (    
     <PlaceItem
       title={item.title}
       image={item.image}
@@ -28,12 +27,12 @@ const PlaceListScreen = ({ navigation }) => {
     />
   );
 
-  return (
-    <FlatList
-      data={places}
-      keyExtractor={(item) => item.id}
-      renderItem={renderItem}
-    />
+  return (    
+      <FlatList
+        data={places}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+      />         
   );
 };
 

@@ -26,7 +26,7 @@ export const getReservation = () => {
   };
 };
 
-export const removeReservation = (reservationID) => ({
+export const removeReservation = (reservation) => ({
   type: REMOVE_RESERVATION,
-  reservationID,
+  reservation,
 }); 

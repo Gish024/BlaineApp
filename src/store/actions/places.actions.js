@@ -7,6 +7,7 @@ import Map from "../../constants/Map";
 export const ADD_PLACE = "ADD_PLACE";
 export const LOAD_PLACES = "LOAD_PLACES";
 
+
 export const addPlace = (title, image, location) => {
   return async (dispatch) => {
     const response = await fetch(

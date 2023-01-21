@@ -35,7 +35,7 @@ const PlacesReducer = (state = initialState, action) => {
               item.lng
             )
         ),
-      };
+      };    
     default:
       return state;
   }

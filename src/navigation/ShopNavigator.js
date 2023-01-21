@@ -53,24 +53,24 @@ export default ShopNavigator = () => {
         })}
       />
       <Stack.Screen 
-        name='Listado de Reservas' 
+        name='Reservas' 
         component={CartScreen}
         options={({route}) => ({
           title: route.params.name,
         })}
       />      
       <Stack.Screen 
-        name='Historial' 
+        name='Comprobante de reserva' 
         component={ReservationScreen}
         options={({route}) => ({
           title: route.params.name,
         })}
       />
       <Stack.Screen
-        name="Dirección"
+        name="Registro de Usuario"
         component={PlaceListScreen}
         options={({ navigation }) => ({
-        title: "Dirección",
+        title: "Registro de Usuario",
           headerRight: () => (
             <TouchableOpacity onPress={() => navigation.navigate("Nuevo")}>
               <Ionicons

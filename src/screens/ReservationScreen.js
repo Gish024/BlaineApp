@@ -13,9 +13,9 @@ const ReservationScreen = ({ navigation}) => {
     dispatch(getReservation());
   }, []); 
   
-  handleRegistUser = ({ getReservation }) => {
-    dispatch(removeReservation(getReservation));
-    navigation.navigate('Dirección');
+  handleRegistUser = ({ reservation }) => {
+    dispatch(removeReservation(reservation));
+    navigation.navigate('Registro de Usuario');
   };
 
   const renderItem = ({ item }) => (

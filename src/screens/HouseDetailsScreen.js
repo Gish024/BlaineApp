@@ -14,7 +14,7 @@ const HouseDetailsScreen = ({ navigation }) => {
 
   const handleAddItemCart = (item) => {
     dispatch(addItem(house));
-    navigation.navigate('Listado de Reservas', {
+    navigation.navigate('Reservas', {
       name: item.title,          
     });
   };

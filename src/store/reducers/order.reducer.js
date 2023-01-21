@@ -12,10 +12,7 @@ const OrderReducer = (state = initialState, action ) => {
         list: action.payload,
       };
     case REMOVE_RESERVATION:
-      const cleanList = [...state.list].filter(
-        (reservation) => reservation.id !== action.reservationID
-      );
-      return {...state, list: cleanList };
+      return {...state, list: [] };    
 
     default:
       return state;
