@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import CartNavigator from "./CartNavigator";
 import Ionicons from '@expo/vector-icons/Ionicons';

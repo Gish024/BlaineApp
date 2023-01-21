@@ -12,7 +12,7 @@ const CartScreen = ({ navigation }) => {
 
   const handleConfirmCart = () => {
     dispatch(confirmCart(items, total));
-    navigation.navigate('Reserva Exitosa', {
+    navigation.navigate('Historial', {
       total: items.days,                
     });
   };  

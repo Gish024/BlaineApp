@@ -1,4 +1,4 @@
-import { GET_RESERVATION } from "../actions/order.action";
+import { GET_RESERVATION, REMOVE_RESERVATION } from "../actions/order.action";
 
 const initialState = {
   list: [],
@@ -11,6 +11,12 @@ const OrderReducer = (state = initialState, action ) => {
         ...state,
         list: action.payload,
       };
+    case REMOVE_RESERVATION:
+      const cleanList = [...state.list].filter(
+        (reservation) => reservation.id !== action.reservationID
+      );
+      return {...state, list: cleanList };
+
     default:
       return state;
   }

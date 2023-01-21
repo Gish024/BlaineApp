@@ -1,23 +1,21 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useEffect } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { getReservation, removeReservation } from '../store/actions/order.action';
+import { useDispatch, useSelector } from 'react-redux';
 
 import ReservationItem from '../components/ReservationItem';
-import { getReservation } from '../store/actions/order.action';
-import { removeItem } from '../store/actions/cart.action';
 
-const ReservationScreen = ({ navigation }) => {
+const ReservationScreen = ({ navigation}) => {
   const dispatch = useDispatch();
   const reservation = useSelector((state) => state.reservation.list);
 
   useEffect(() => {
     dispatch(getReservation());
-  }, []);
-
- 
-  handleReturnInit = (reservation) => {
-    dispatch(removeItem(reservation.id));
-    navigation.navigate('Home');
+  }, []); 
+  
+  handleRegistUser = ({ getReservation }) => {
+    dispatch(removeReservation(getReservation));
+    navigation.navigate('Dirección');
   };
 
   const renderItem = ({ item }) => (
@@ -25,24 +23,25 @@ const ReservationScreen = ({ navigation }) => {
   );
 
 
+  
   return (
     <View style={styles.container}>
       <FlatList
         data={reservation}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
-       />
-       <TouchableOpacity
-          onPress={handleReturnInit}
-          style={styles.confirm}
-          >
-        <Text style={styles.buttonText}>Volver al Inicio</Text>
-      </TouchableOpacity>
+      />
+      <TouchableOpacity
+        onPress={handleRegistUser}
+        style={styles.confirm}
+      >
+        <Text style={styles.buttonText}>Registrar Usuario</Text>
+      </TouchableOpacity>      
     </View>
   );
 };
 
-export default connect()(ReservationScreen);
+export default ReservationScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -65,3 +64,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },    
 });
+  

@@ -20,7 +20,7 @@ export default CartNavigator = () => {
       <Stack.Screen
         name='Cart'
         component={CartScreen}
-        options={{ title: 'Reservas seleccionadas' }}
+        options={{ title: 'Listado de Reservas' }}
       />        
     </Stack.Navigator>
   );

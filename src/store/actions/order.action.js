@@ -1,6 +1,7 @@
 import { URL_API } from "../../constants/Database";
 
 export const GET_RESERVATION = "GET_RESERVATION";
+export const REMOVE_RESERVATION = "REMOVE_RESERVATION";
 
 export const getReservation = () => {
   return async (dispatch) => {
@@ -24,3 +25,8 @@ export const getReservation = () => {
     }
   };
 };
+
+export const removeReservation = (reservationID) => ({
+  type: REMOVE_RESERVATION,
+  reservationID,
+}); 

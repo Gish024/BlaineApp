@@ -11,11 +11,10 @@ const formatDay = (time) => {
 const ReservationItem = ({ item }) => {
   return (
     <View>
-      <View style={styles.container}>
-        <Text style={styles.item}>¡Gracias por confiar en nosotros!</Text>
+      <View style={styles.container}>        
         <Text style={styles.text}>Fecha de reserva: {formatDay(item.date)}</Text>
         <Text style={styles.text}>Total a abonar $ {item.total}USD</Text>
-        <Text style={styles.text}>Le enviaremos por email su cupón de pago</Text>            
+        <Text style={styles.text}>¡Ahora sólo falta registrarte!</Text>            
       </View>      
     </View>
   );

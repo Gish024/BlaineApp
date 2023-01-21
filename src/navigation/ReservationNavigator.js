@@ -18,10 +18,10 @@ export default ReservationNavigator = () => {
       }} 
     >
       <Stack.Screen
-        name='Reservation'
+        name='Historial'
         component={ReservationScreen}
         options={{
-          title: 'Reserva confirmada',
+          title: 'Historial',
         }}
       />
 
