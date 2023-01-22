@@ -43,7 +43,7 @@ const ImageSelector = (props) => {
         )}
       </View>
       <Button
-        title="Foto de perfil"
+        title="Tomar Foto de perfil"
         color={'#82B1FF'}
         onPress={handlerTakeImage}
       />

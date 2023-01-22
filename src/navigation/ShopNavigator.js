@@ -1,5 +1,3 @@
-//screens
-
 import { Platform, TouchableOpacity } from "react-native";
 
 import CartScreen from '../screens/CartScreen';

@@ -23,7 +23,7 @@ const PlaceListScreen = ({ navigation }) => {
       title={item.title}
       image={item.image}
       address={item.address}
-      onSelect={() => navigation.navigate("Detalle", { placeId: place.id })}
+      onSelect={() => navigation.navigate("Detalle", { placeId: item.id })}
     />
   );
 

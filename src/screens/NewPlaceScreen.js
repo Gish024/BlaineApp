@@ -20,7 +20,7 @@ const NewPlaceScreen = ({ navigation, route }) => {
   const [location, setLocation] = useState();
 
   useEffect(() => {
-    console.log(route, "Ubicación de usuario");
+    console.log(route, "Nueva dirección");
   }, [route]);
 
   const handleTitleChange = (text) => setTitle(text);

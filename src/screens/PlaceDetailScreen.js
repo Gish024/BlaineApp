@@ -6,9 +6,7 @@ import { useSelector } from "react-redux";
 
 const PlaceDetailScreen = ({ route }) => {
   const { placeId } = route.params;
-  const place = useSelector((state) =>
-    state.places.places.find((item) => item.id === placeId)
-  );
+  const place = useSelector((state) => state.places.places.find((item) => item.id === placeId));
 
   useEffect(() => {
     console.log(place);
