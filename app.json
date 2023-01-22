@@ -1,9 +1,12 @@
 {
   "expo": {
     "name": "BlaineApp",
-    "slug": "blaineApp",
+    "slug": "blaineapp",
     "version": "1.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -43,6 +46,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "af470918-de12-4890-8efa-8e5abfbe619c"
+      }
+    },
+    "owner": "gish024"
   }
 }
